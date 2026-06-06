@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   GLOBAL STYLES — GEOTECH ENGINEERING BENIN
+   ============================================================ */
+
+@layer base {
+  :root {
+    --nav-height: 80px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-brand-navy;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-brand-blue/20 text-brand-navy;
+  }
+
+  /* Scrollbar custom */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-brand-gray-light;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand-blue/40 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-brand-blue/70;
+  }
+}
+
+@layer components {
+  /* ---- Section ---- */
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ---- Typography ---- */
+  .heading-hero {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight;
+  }
+
+  .heading-section {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .heading-card {
+    @apply font-display text-xl md:text-2xl font-semibold;
+  }
+
+  .label-section {
+    @apply font-mono text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-brand-cyan;
+  }
+
+  /* ---- Buttons ---- */
+  .btn-primary {
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 bg-brand-blue text-white font-body font-semibold text-sm tracking-wide
+           rounded-sm hover:bg-brand-blue-light transition-all duration-200
+           shadow-md hover:shadow-glow-blue active:scale-[0.98];
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#25D366] text-white font-body font-semibold text-sm tracking-wide
+           rounded-sm hover:bg-[#1ebe5d] transition-all duration-200
+           shadow-md hover:shadow-lg active:scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 border border-brand-blue text-brand-blue font-body font-semibold text-sm tracking-wide
+           rounded-sm hover:bg-brand-blue hover:text-white transition-all duration-200 active:scale-[0.98];
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 border border-white/30 text-white font-body font-semibold text-sm tracking-wide
+           rounded-sm hover:bg-white/10 transition-all duration-200 active:scale-[0.98];
+  }
+
+  /* ---- Cards ---- */
+  .card-service {
+    @apply bg-white border border-brand-gray-mid rounded-sm p-8 hover:shadow-card-hover hover:border-brand-blue/20
+           transition-all duration-300;
+  }
+
+  .card-product {
+    @apply bg-white border border-brand-gray-mid rounded-sm overflow-hidden hover:shadow-card-hover
+           transition-all duration-300;
+  }
+
+  /* ---- Divider ---- */
+  .divider-gradient {
+    @apply h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent;
+  }
+
+  /* ---- Background patterns ---- */
+  .bg-navy-pattern {
+    background-color: #0A1628;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* ---- Animations ---- */
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+
+  /* ---- Focus styles ---- */
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2;
+  }
+}
+
+/* ---- Framer Motion helpers ---- */
+.will-animate {
+  opacity: 0;
+}

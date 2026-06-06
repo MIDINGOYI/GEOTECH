@@ -1,0 +1,36 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A1628"/>
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <!-- Accent line top -->
+  <defs>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="2" fill="url(#lineGrad)"/>
+  <!-- Logo mark -->
+  <rect x="80" y="80" width="48" height="48" rx="4" fill="#1B4FD8"/>
+  <polyline points="96,116 112,88 128,116" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="90" y1="108" x2="134" y2="108" stroke="#22D3EE" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="112" cy="108" r="3" fill="#22D3EE"/>
+  <!-- Company name -->
+  <text x="144" y="108" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" font-weight="800" fill="white" letter-spacing="2">GEOTECH</text>
+  <text x="144" y="124" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#06B6D4" letter-spacing="4">ENGINEERING BÉNIN</text>
+  <!-- Main title -->
+  <text x="80" y="300" font-family="'Georgia', 'Times New Roman', serif" font-size="64" font-weight="700" fill="white">Expertise en Géomatique</text>
+  <text x="80" y="380" font-family="'Georgia', 'Times New Roman', serif" font-size="64" font-weight="700" fill="#22D3EE">Topographie &amp; Génie Civil</text>
+  <!-- Subtitle -->
+  <text x="80" y="440" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.55)">Levés GNSS · Hydraulique · VRD · SIG · Évaluation Immobilière</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(27,79,216,0.2)"/>
+  <text x="80" y="612" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.5)">geotech-benin.com</text>
+  <text x="1000" y="612" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.4)">+229 01 97 24 80 94</text>
+</svg>
