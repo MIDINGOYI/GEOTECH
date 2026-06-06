@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { CheckCircle2, Zap, Wifi, Droplets, Road } from 'lucide-react'
+import { CheckCircle2, Zap, Wifi, Droplets,  Truck } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PageHeader } from '@/components/ui/PageHeader'
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 const DOMAINS = [
   {
-    icon: Road,
+    icon: Truck,
     title: 'Voirie',
     items: ['Tracé en plan et profil en long', 'Chaussées et trottoirs', 'Signalisation horizontale et verticale', 'Éclairage public'],
   },
