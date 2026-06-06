@@ -73,7 +73,7 @@ export function Header() {
         <nav className="hidden lg:flex items-center gap-1" ref={dropdownRef}>
           {NAV_ITEMS.map((item) => (
             <div key={item.href} className="relative">
-              {item.children ? (
+              {'children' in item && item.children ? (
                 <button
                   onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
                   className={cn(
