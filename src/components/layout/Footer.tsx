@@ -71,7 +71,7 @@ export function Footer() {
           <div>
             <h3 className="font-body text-sm font-bold text-white tracking-wide uppercase mb-5">Navigation</h3>
             <ul className="flex flex-col gap-2.5">
-              {NAV_ITEMS.filter((item) => !('children' in item)).map((item) => (
+              {NAV_ITEMS.filter((item): item is typeof item &{ children?: never} => !('children' in item)).map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
