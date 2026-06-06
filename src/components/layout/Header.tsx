@@ -108,7 +108,7 @@ export function Header() {
 
               {/* Dropdown */}
               <AnimatePresence>
-                {item.children && activeDropdown === item.label && (
+                {'children' in item && item.children && activeDropdown === item.label && (
                   <motion.div
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ export function Header() {
                     className="absolute top-full left-0 mt-2 w-64 bg-brand-navy border border-white/10 rounded-sm shadow-2xl py-2 z-50"
                     role="menu"
                   >
-                    {item.children.map((child) => (
+                    {'children' in item && item.children && item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
@@ -195,9 +195,9 @@ export function Header() {
                   >
                     {item.label}
                   </Link>
-                  {item.children && (
+                  {'children' in item && item.children && (
                     <div className="ml-4 flex flex-col gap-0.5 mt-1 mb-2">
-                      {item.children.map((child) => (
+                      {item.children && item.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
